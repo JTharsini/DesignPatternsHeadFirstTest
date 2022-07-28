@@ -1,0 +1,80 @@
+Strategy : I don't like to have empty overriding methods just because I am going to introduce a new feature for some existing things
+Eg: Flying feature for Duck
+
+Observer : Observe on changes for one to many relationship
+Eg: Overview, publisher-subscriber
+Event Listeners in java
+
+Decorator : kind of wrappers, add features dynamically
+Eg: Coffee, Milk, Soy
+Streams in Java
+
+Factory : encapsulate object creation
+Eg: Pizza with type
+
+Factory method : allowing sub classes to decide object creation
+Eg: Pizza with type and place
+
+AbstractFactory : an interface for creating family of products
+Eg: Pizza ingredients factory
+
+Singleton : Only on instance
+Eg: Chocalate factory
+
+Command : encapsulates request as an object ==> separate request from receiver and invoker
+Eg: log requests, queue, undo
+
+Adapter : converts a class as client expect(two different people: broker in middle)
+Eg: Turkey as duck, enumeration -> iterator
+
+Facade: unified interface for subsystem : principle of least knowledge
+Eg: Home theater
+
+Template : encapsulating algorithms (subclass decides one or more part of the algorithm resides in super class) : hollywood principle - don't call us, we will call you
+Eg: Coffee or tea making, general sorting with comparable, Swing paint method, Applet
+
+Iterator : access aggregated object without exposing underlying implementation : single responsibility - a class should have only one reason to change
+Eg: Merging menus with list, array and hashtable
+
+Composite : let clients to treat individual objects and compositions of objects uniformly (tree like structure)
+Eg: Submenu in menu
+
+State : allows an object to alter its behavior when its internal state changes : there is a static inbuilt algorithm for changes.
+Eg: Gumball machine with state changes
+
+Proxy: placeholder for another object to control access to it
+Eg: RMI - gumball machines in network are monitored by a client(client side : stub, server side : skeleton)
+
+MVC: 
+-view is observer for model
+-controller is the strategy for the view
+-strategy means an algorithm
+-can have multiple controller for a view
+https://stackoverflow.com/questions/10064105/mvc-why-controller-is-the-strategy-for-the-view
+-view is a composite itself
+
+Pattern categories:
+1. Creational - Singleton, Builder, Prototype, Abstract Factory, Factory method
+2. Structural - Decorator, Proxy, Facade, Composite, Flyweight, Bridge, Adapter
+3. Behavioral - Mediator, Visitor, Template method, Iterator, Command, Memento, Interpreter, Observer, Chain of Responsibility, State, Strategy
+
+Bridge: allows to change either side of hierarchies independently. (Need to change not only implementation, but also abstraction)
+Eg: TV and remote, Separate window abstraction from window implementation for different OS (Button <<- skin(interface) <- WindowsSkin and MacSkin
+(Abstraction layer changes don't affect implementation layer and vice versa)
+Two layers of abstraction between classes and one class is dependent upon the other.
+
+Builder: to encapsulate the construction of a product and allow it to be constructed in steps.
+
+Chain of responsibility : chain of objects to examine a request. Passes to successor if it can't handle the request itself. Eg: Email filter
+
+Flyweight: Many objects and all behave similar way - rather creating separate objects keep all as virtual objects with states Eg: Tree drawing
+
+Interpreter: to build an interpreter for a language: Direct mapping to grammar.
+
+Mediator: Centralize the logic between components to a single system.
+
+Memento: Saving the important state of a system's key object and maintaining the key object's encapsulation
+
+Prototype: Copying an existing instance
+
+Visitor: Add capabilities to a composite of objects && encapsulation is not important: Eg: Html
